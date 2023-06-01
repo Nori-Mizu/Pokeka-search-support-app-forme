@@ -7,6 +7,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/server.js",
+    "build": "npm install && npx knex migrate:latest --knexfile data/knexfile.js && npx knex seed:run --knexfile data/knexfile.js",
     "makeSeed": "knex seed:make",
     "test": "cross-env NODE_ENV=test mocha -r dotenv/config ./tests/* --exit --reporter nyan tests",
     "makeMigration": "knex migrate:make --knexfile data/knexfile.js",
