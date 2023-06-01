@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start ",
-    "build": "react-scripts build && npm install && npm install ../backend && npx knex migrate:latest --knexfile ../backend/data/knexfile.js && npx knex seed:run --knexfile ../backend/data/knexfile.js",
+    "build": "react-scripts build && npm install",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
