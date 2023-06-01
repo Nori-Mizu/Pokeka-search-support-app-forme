@@ -19,36 +19,45 @@ module.exports = {
     },
   },
 
-  staging: {
+    production: {
     client: "pg",
-    connection: DATABASE_URL,
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: "./migrations",
-      tableName: "knex_migrations",
+      directory: "./data/migrations",
     },
+    seeds: { directory: "./data/seeds" },
   },
 
-  production: {
-    client: "pg",
-    connection: {
-      database: "pokemonsearch",
-      user: "user",
-      password: "user",
-    },
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    migrations: {
-      directory: "./migrations",
-      tableName: "knex_migrations",
-    },
-  },
-};
+  // staging: {
+  //   client: "pg",
+  //   connection: DATABASE_URL,
+  //   pool: {
+  //     min: 2,
+  //     max: 10,
+  //   },
+  //   migrations: {
+  //     directory: "./migrations",
+  //     tableName: "knex_migrations",
+  //   },
+  //   // },
+
+//   production: {
+//     client: "pg",
+//     connection: {
+//       database: "pokemonsearch",
+//       user: "user",
+//       password: "user",
+//     },
+//     pool: {
+//       min: 2,
+//       max: 10,
+//     },
+//     migrations: {
+//       directory: "./migrations",
+//       tableName: "knex_migrations",
+//     },
+//   },
+// };
 
 // require("dotenv").config({
 //   path: "../.env",
