@@ -19,7 +19,7 @@ module.exports = {
     },
   },
 
-    production: {
+  production: {
     client: "pg",
     connection: process.env.DATABASE_URL,
     migrations: {
@@ -27,19 +27,19 @@ module.exports = {
     },
     seeds: { directory: "./data/seeds" },
   },
-
-  // staging: {
-  //   client: "pg",
-  //   connection: DATABASE_URL,
-  //   pool: {
-  //     min: 2,
-  //     max: 10,
-  //   },
-  //   migrations: {
-  //     directory: "./migrations",
-  //     tableName: "knex_migrations",
-  //   },
-  //   // },
+};
+// staging: {
+//   client: "pg",
+//   connection: DATABASE_URL,
+//   pool: {
+//     min: 2,
+//     max: 10,
+//   },
+//   migrations: {
+//     directory: "./migrations",
+//     tableName: "knex_migrations",
+//   },
+//   // },
 
 //   production: {
 //     client: "pg",
