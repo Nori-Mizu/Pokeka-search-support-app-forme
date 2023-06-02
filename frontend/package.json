@@ -14,6 +14,9 @@
   },
   "scripts": {
     "start": "react-scripts start ",
+    "install:front": "react-scripts start",
+    "install:back": "cd .. && cd backend && node ./server.js",
+    "start2": "run-p install:*",
     "build": "react-scripts build && npm install",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

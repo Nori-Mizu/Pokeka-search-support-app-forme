@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/button.css";
 // import _ from "lodash";
+console.log(process.env);
 
 export default function Button(props) {
   const getAllPoke = async () => {
@@ -10,7 +11,6 @@ export default function Button(props) {
     result = await pokeArray.json();
     props.resultNumSet(result);
   };
-
   return (
     <>
       <div>
